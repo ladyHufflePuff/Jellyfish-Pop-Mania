@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"> 
+        <title>Jellyfish Pop Mania Online Game</title>
+        <link rel="stylesheet" href="Styling\settings.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" > <!--link for icon style sheet-->
+    </head>
+    <body>
+        <header> 
+            <nav>  <!-- navigation menu -->
+                <label class="logo"> Jellyfish Pop mania</label> 
+                <ul class="menu_bar">
+                    <li><i class='bx bx-home'></i><a href="preview.html">Home<a></li>
+                    <li><i class='bx bx-play'></i><a href="gameplay.html">Start<a></li>
+                    <li><i class='bx bx-help-circle'></i><a href="instructions.html">How to Play</a></li>
+                    <li><i class='bx bx-crown'></i><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><i class='bx bx-cog'></i><a class= "active"href="settings.html">Settings</a></li>
+                    <li><i class='bx bx-exit'></i><a href="settings.html">Logout</a></li>
+                </ul>   
+            </nav>
+        </header>
+        <main>
+            <div class="container"> <!--Game settings-->
+                <h1>Settings</h1> 
+                <div class="content">
+                    <h3> Profile Settings</h3>
+                    <div class="row">
+                        <div class="label" >Username</div>
+                        <div class="entry" id="username"></div>
+                    </div>
+                    <div class="row">
+                        <div class="label" >Email</div>
+                        <div class="entry" id="email"></div>
+                    </div>
+                    <div class="row">
+                        <div class="label" >Password</div>
+                        <div class="entry" id="password"></div>
+                    </div>
+                    <div class="row">
+                        <div class="label" id="open_phone_popup" ><i>Add Phone number</i></div>
+                        <div class="entry" id="phone_number"></div>
+                        <!-- pop up window to add phone number-->
+                        <div class="popup"id="phone_popup" >
+                            <span class="close_popup" id="close_phone_popup">&times;</span>
+                            <label for="email">Enter your Phone number:</label>
+                            <input type="text" id="phone_number_entry" >
+                            <div class="error" id="phone_number_error"></div>
+                            <button id="save_phone_number">Save</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label" id="open_security_popup" ><i>Add security question</i></div>
+                        <div class="entry" id="security_question"></div>
+                        <!-- pop up window to answer security question-->
+                        <div class="popup"id="security_popup" >
+                            <span class="close_popup" id="close_security_popup">&times;</span>
+                            <label for="email">If you could have any superpower, what would it be?</label>
+                            <input type="text" id="security_question_entry">
+                            <div class="error" id="security_question_error"></div>
+                            <button id="save_security_question">Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">    
+                    <h3> Account settings</h3>
+                    <label for="toggle_music" class="toggle_label">
+                       <span>Music</span> 
+                       <!-- music on/off control -->
+                       <input type="checkbox" id="toggle_music" checked>
+                       <div class="toggle-container">
+                        <span class="toggle"></span>
+                        <span class="toggle-c"></span>
+                       </div>
+                    </label>
+                    <label for="toggle_sound" class="toggle_label">
+                        <span>Sound</span> 
+                         <!-- sound on/off control-->
+                        <input type="checkbox" id="toggle_sound" checked>
+                        <div class="toggle-container">
+                         <span class="toggle"></span>
+                         <span class="toggle-c"></span>
+                        </div>
+                    </label>
+                    <label for="logout" class="toggle_label">
+                        <span id="open_logout_popup">Log Out</span> 
+                        <!--verification message pop up window-->
+                        <div class="popup"id="logout_popup" >
+                            <i class='bx bx-exit'></i>
+                            <h4>Are you sure you want to logout?</h4> <!-- verification message -->
+                            <p>You can always come back later, we've got you profile and progress covered!  </p>
+                            <a href="landing.html"><button type="button">Continue</button></a>
+                            <button type="button" id="close_logout_popup" >Cancel</button>
+                        </div>
+                    </label>
+                    <label for="delete_account" class="toggle_label">
+                        <span id="open_delete_popup">Delete Account</span> 
+                        <!--verification message pop up window-->
+                        <div class="popup"id="delete_popup" >
+                            <i class='bx bx-trash'></i>
+                            <h4>Are you sure you want to delete your account ?</h4> <!-- verification message -->
+                            <p>Before you proceed, be aware that account deletion earses your profile and progress.  </p>
+                            <button id="terminate" type="button">Continue</button>
+                            <button type="button" id="close_delete_popup" >Cancel</button>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </main>
+        <!-- bubble effect -->
+        <div class="bubble">
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+        </div>    
+        <footer> <!--footer-->
+            <div class="copyright_label">
+                <p>Copyright &copy; 2023 Uchechi Johnson. All Rights Reserved</p>
+            </div>
+        </footer> 
+        <script src="Scripts\script.js"></script> 
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"> 
+        <title>Jellyfish Pop Mania Online Game</title>
+        <link rel="stylesheet" href="Styling\verification.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" > <!--link for icon style sheet-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Log In form-->
+            <form id="signin_form">
+                <h1>Sign In</h1>
+                <div class ="input_box"> 
+                    <input type="text" id="username" placeholder="Username" >
+                    <i class='bx bxs-user'></i>
+                    <div class="error"></div>
+                </div>
+                <div class ="input_box"> 
+                    <input type="password" id="password" placeholder="Password">
+                    <i class='bx bxs-lock-alt'></i>
+                    <div class="error"></div>
+                </div>
+                <div class="forgot">
+                    <a id="open_forgot_password_popup"> Forgot Password?</a>
+                    <!--Recover password pop up window-->
+                    <div class="popup"id="forgot_password_popup" >
+                        <span class="close_popup" id="close_forgot_password_popup">&times;</span>
+                        <label>If you could have any superpower, what would it be?</label>
+                        <input type="text" id="security_answer" placeholder="Security Answer">
+                        <button id="recover_password">Recover Password</button>
+                    </div>
+                </div>
+                <div class="status"></div>
+                <button type="submit" class="verify"> Login</button>
+                <div class="sign_link">
+                    <a href="signup.html">Don't have an account?</a>
+                </div>
+            </form>
+            
+
+        </div>
+        <!-- bubble effect -->
+        <div class="bubble">
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+        </div>
+        <footer> <!--footer-->
+            <div class="copyright_label">
+                <p>Copyright &copy; 2023 Uchechi Johnson. All Rights Reserved</p>
+            </div>
+        </footer>
+        <script src="Scripts\verification.js"></script>
+    </body>
+</html>

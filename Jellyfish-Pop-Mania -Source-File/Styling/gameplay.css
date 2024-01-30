@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("Images/underwater_background.jpg") no-repeat;/* Spongebob themed background image */
+    background-size: cover;
+    background-position: center;
+}
+/* special font for game name and  header */
+@font-face { 
+    font-family: 'SpongeFont';
+    src: url("Fonts/SpongeBob Font Wide Regular.woff") format('woff');
+} 
+nav{
+    background:transparent;
+    backdrop-filter: blur(10px);
+    height: 60px;
+    width: 100%;
+}
+label.logo{
+    font-family: 'SpongeFont',sans-serif;
+    color: #ce7e00;
+    font-size: 30px;
+    line-height: 60px;
+    padding: 0 80px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.menu_bar{
+    float: right;
+    margin-right: 10px;
+}
+.menu_bar li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 10px;
+    position: relative;
+}
+.menu_bar li i{
+    color: #ce7e00;;
+    margin: 0 3px;
+}
+.menu_bar  a{
+    font-weight: 500;
+    font-size: 16px;
+    color: #ce7e00;;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ /* indication slider effect */
+.menu_bar  li::after{
+    content: ''; 
+    height: 3px;
+    width: 0;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0px;  
+    transition: 0.5s; 
+}
+.menu_bar  li:hover::after{
+    width: 100%;
+}
+a.active,.bx:hover, a:hover{
+    color: #000;
+}
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background:transparent;
+    backdrop-filter: blur(10px); /*blur background effect */
+    border-style: solid;
+    border-image-width: 25px;
+    /*wood grain border effect */
+    border-image-source: url('Images/woodgrain.png'); 
+    border-image-slice: 20;
+    border-image-repeat: stretch;
+    border-image-outset: 0;
+}
+.status_bar{
+    background:url('Images/woodgrain.png') ;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    
+}
+.status_bar  li{
+    font-family: 'SpongeFont',sans-serif;
+    position: relative;
+    line-height: 70px;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    color: 000;;
+    text-transform: uppercase;  
+}
+.status_bar i{
+   margin-left: 750px;
+    font-size: 50px;  
+}
+.input_box {
+    display: flex;
+    align-items: center;
+   
+}
+.input_box div {
+    margin: 0;
+    border-radius: 87% 13% 85% 15% / 0% 96% 4% 100% ;
+    text-align: center;
+    width: 50px;
+    height: 25px;
+    padding: 8px;
+    margin-left:  8px;
+    margin-right: 20px;
+    background-color: #cccccc;
+    color: #000;
+    font-size: 12px;
+}
+.popup{
+  width: 300px;
+  background: #cccccc;
+  border-radius: 6px;
+  position: absolute;
+  top:40%;
+  left: 50%;
+  text-align: center;
+  padding: 30px 30px;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+.popup i{
+  font-size: 30px;
+  color: #ce7e00;
+}
+.popup h4{
+  font-size: 20px;
+  margin: 20px  10px;
+  color: #ce7e00;
+}
+
+.popup button{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0 ;
+  background-color:rgb(179, 175, 175);
+  color: #ce7e00;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.level{
+    font-family: 'SpongeFont',sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 90px;
+    right: 50px;
+    color: #000;
+    text-align: right;
+    text-transform: uppercase; 
+}
+.canvas{
+  position: absolute;
+  left: 13%;
+  background-color: none;
+}
+.character{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  height: 120px;
+  width: 120px;
+  z-index: 0;
+}
+
+/* seaweed effect animation */
+.weed_1{
+    position: absolute;
+    width: 150px;
+    height: 180px;
+    transform-origin: bottom left;
+    left: 15px; 
+    bottom:25px;
+  animation: weed 7s -1s infinite;
+}
+.weed_2{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    transform-origin: bottom left;
+    left: 250px;
+    bottom:25px;
+  animation: weed 9s -1s infinite;
+}
+.weed_3{
+    position: absolute;
+    width: 150px;
+    height: 180px;
+    transform-origin: bottom left;
+    left: 50px;
+    bottom:25px;
+  animation: weed 8s -1s infinite;
+}
+.weed_4{
+    position: absolute;
+    width: 150px;
+    height: 180px;
+    transform-origin: bottom left;
+    left: 1210px;
+    bottom:25px;
+  animation: weed 6s -1s infinite;
+}
+.weed_5{
+    position: absolute;
+    width: 150px;
+    height: 180px;
+    transform-origin: bottom left;
+    left: 1150px;
+    bottom:25px;
+  animation: weed 8s -1s infinite;
+}
+.weed_6{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    transform-origin: bottom left;
+    left: 900px;
+    bottom:25px;
+  animation: weed 7s -1s infinite;
+}
+.weed_7{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    transform-origin: bottom left;
+    left: 360px;
+    bottom:25px;
+  animation: weed 8s -1s infinite;
+}
+.weed_8{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    transform-origin: bottom left;
+    left: 480px;
+    bottom:25px;
+  animation: weed 6s -1s infinite;
+}
+.weed_9{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    transform-origin: bottom left;
+    left: 1000px;
+    bottom:25px;
+  animation: weed 9s -1s infinite;
+}
+.weed_10{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    transform-origin: bottom left;
+    left: 800px;
+    bottom:25px;
+  animation: weed 9s -1s infinite;
+}
+@keyframes weed {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+
+.copyright_label{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:transparent;
+    height: auto;
+    width: 100vw;
+    padding: 10px;
+    color: black;
+    text-align: center;
+}
+.copyright_label p{
+    font-size: 12px;
+    word-spacing: 2px;
+    text-transform: capitalize ;
+}

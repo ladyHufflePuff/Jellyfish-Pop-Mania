@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" >
+        <title> Jellyfish Pop Mania Online Game</title> 
+        <link rel="stylesheet" href="Styling/gameplay.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" > <!--link for icon style sheet-->
+       
+    </head>
+    <body>
+        <header> 
+            <nav> <!-- navigation header menu -->
+                <label class="logo"> Jellyfish Pop Mania</label> 
+                <ul class="menu_bar"> 
+                    <li><i class='bx bx-home'></i><a href="preview.html">Home<a></li>
+                    <li><i class='bx bx-play'></i><a href="gameplay.html">Play<a></li>
+                    <li><i class='bx bx-help-circle'></i><a href="instructions.html">How to Play</a></li>
+                    <li><i class='bx bx-crown'></i><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><i class='bx bx-cog'></i><a href="settings.html">Settings</a></li>
+                    <li><i class='bx bx-exit'></i><a href="settings.html">Logout</a></li>
+                </ul>   
+            </nav>
+        </header>
+        <main>
+            <div class="container"> <!-- Game -->
+                <ul class="status_bar"> <!--game status bar-->
+                    <li>Highscore:</li>
+                    <div class ="input_box"> 
+                        <div id="highscore" ></div>
+                    </div>
+                    <li>Score:</li>
+                    <div class ="input_box"> 
+                        <div id ="score"  ></div>
+                    </div>
+                    <li>Moves:</li>
+                    <div class ="input_box"> 
+                        <div id="moves" ></div>
+                    </div>
+                    <li><i id="pause" class='bx bx-pause'></i></li>
+                </ul>
+               
+               <div class="game">
+                    <div class="level" id="level"></div>
+                    <canvas id="canvas"  class="canvas"></canvas> 
+                    <!-- pause poup -->
+                    <div class="popup"id="pause_popup" >
+                        <i class='bx bx-pause'></i>
+                        <h4>Paused</h4> 
+                        <button id="resume_game">Resume</button>                    
+                        <a href="preview.html"><button type="button">Exit</button></a>
+                    </div>    
+                    <!-- game over popup -->
+                    <div class="popup"id="game_over_popup" >
+                            <i class='bx bxs-skull'></i>
+                            <h4>Game Over</h4> 
+                            <a href="gameplay.html"><button id="restart_game" >Play Again</button>  </a>                  
+                            <a href="preview.html"><button type="button">Exit</button></a>
+                    </div>
+                    
+                    <!--seaweed effect-->
+                    <img class="weed_1" src="Styling/Images/seaweed.svg" alt="seaweed">
+                    <img class="weed_2" src="Styling/Images/seaweed.svg" alt="seaweed">
+                    <img class="weed_3" src="Styling/Images/seaweed.svg" alt="seaweed">
+                    <img class="weed_4" src="Styling/Images/seaweed.svg" alt="seaweed">
+                    <img class="weed_5" src="Styling/Images/seaweed.svg" alt="seaweed">
+                    <img class="weed_6" src="Styling/Images/seaweed.svg" alt="seaweed">
+                    <img class="weed_7" src="Styling/Images/seaweed.svg" alt="seaweed">
+                    <img class="weed_8" src="Styling/Images/seaweed.svg" alt="seaweed">
+                    <img class="weed_9" src="Styling/Images/seaweed.svg" alt="seaweed">
+                    <img class="weed_10" src="Styling/Images/seaweed.svg" alt="seaweed">
+                </div> 
+            </div>
+        </main>
+        <footer> <!--footer-->
+            <div class="copyright_label">
+                <p>Copyright &copy; 2023 Uchechi Johnson. All Rights Reserved</p>
+            </div>
+        </footer>
+        <!-- gamme sound effect files -->
+        <audio id="collision_sound" src="Styling/Audio/collisionsound.mp3"></audio>
+        <audio id="shock_sound" src="Styling\Audio\shock.mp3"></audio>
+        <audio id="scream_sound" src="Styling\Audio\scream.mp3"></audio>
+        
+        <script src="Scripts\game.js"></script> <!-- gameplay script  -->
+    </body>
+</html>

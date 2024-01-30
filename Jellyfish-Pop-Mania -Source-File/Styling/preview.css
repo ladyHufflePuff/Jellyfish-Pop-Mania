@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("Images/underwater_background.jpg") no-repeat; /* Spongebob themed background image */
+    background-size: cover;
+    background-position: center;
+}
+/* special font for game name */
+@font-face { 
+    font-family: 'SpongeFont';
+    src: url("Fonts/SpongeBob Font Wide Regular.woff") format('woff');
+} 
+nav{
+    background:transparent;
+    backdrop-filter: blur(10px);
+    height: 60px;
+    width: 100%;
+}
+label.logo{
+    font-family: 'SpongeFont',sans-serif;
+    color: #ce7e00;
+    font-size: 30px;
+    line-height: 60px;
+    padding: 0 80px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.menu_bar{
+    float: right;
+    margin-right: 10px;
+}
+
+.menu_bar li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 10px;
+    position: relative;
+}
+.menu_bar li i{
+    color: #ce7e00;;
+    margin: 0 3px;
+}
+.menu_bar  a{
+    font-weight: 500;
+    font-size: 16px;
+    color: #ce7e00;;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ /* indication slider effect */
+.menu_bar  li::after{
+    content: ''; 
+    height: 3px;
+    width: 0;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0px;  
+    transition: 0.5s; 
+}
+.menu_bar  li:hover::after{
+    width: 100%;
+}
+a.active,.bx:hover, a:hover{
+    color: #000;
+}
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background:transparent;
+    backdrop-filter: blur(10px); /*blur background effect */
+    padding: 25px 35px;
+    justify-content: space-between;
+}
+.video_box{
+   float: left;
+   max-width: 500px;
+   height: 270px;
+   margin: 50px;
+   margin-bottom: 150px;
+}
+.video_box video {
+    width:500px;
+    height:236px;
+    border: 5px solid ;
+    border-radius: 10px;
+}
+.text_box{
+    margin-top: 50px; 
+    margin-left: 50px;
+    color: #000;
+}
+.text_box h1{
+    font-size: 36px;
+}
+.text_box h3{
+    font-size: 24px;
+    padding-top: 20px;
+}
+.text_box p{
+    font-size: 16px;
+    padding: 10px;
+}
+.text_box ul{
+    list-style-type: none;
+}
+.text_box li{
+    padding: 5px;
+}
+.copyright_label{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:transparent;
+    height: auto;
+    width: 100vw;
+    padding: 10px;
+    color: black;
+    text-align: center;
+}
+.copyright_label p{
+    font-size: 12px;
+    word-spacing: 2px;
+    text-transform: capitalize ;
+}
